@@ -1,0 +1,48 @@
+.tree {
+  display: grid;
+  text-align: center;
+  justify-items: center;
+}
+
+.treeTitle {
+  text-align: center;
+  font-size: 50px;
+}
+
+.employeeBox {
+  background-color: greenyellow;
+  border-radius: 90%;
+  padding: 30px;
+}
+
+.employeeName {
+  display: block;
+  font-size: 25px;
+}
+
+ul {
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  list-style-type: none;
+  display: flex;
+  margin: 25px;
+}
+
+tree li::before,
+tree li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 1px solid #ccc;
+  width: 50%;
+  height: 20px;
+}
+tree li::after {
+  right: auto;
+  left: 50%;
+  border-left: 1px solid #ccc;
+}

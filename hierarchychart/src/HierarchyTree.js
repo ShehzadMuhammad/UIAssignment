@@ -1,23 +1,32 @@
 import React from "react";
 import data from "./data.json";
+import "./Tree.css";
+
+const EmployeeNode = (props) => {
+  return (
+    <>
+      {props.data.map((employee) => (
+        <ul className="tree">
+          <div className="employeeBox">
+            <span className="employeeName">{employee.name}</span>
+            <span>{employee.title}</span>
+          </div>
+          <li>
+            {employee.children?.length && (
+              <EmployeeNode data={employee.children} />
+            )}
+          </li>
+        </ul>
+      ))}
+    </>
+  );
+};
 
 export default function HierarchyTree() {
-  console.log(data);
-
   return (
-    <div>
-      <div className="tree">
-        {data.map((employee) => {
-          return (
-            <li key={employee.key} className="Employee">
-              <h1>{employee.name}</h1>
-              <h2>{employee.title}</h2>
-              <span>{employee.status}</span>
-              {/* <div>{employee.children}</div> */}
-            </li>
-          );
-        })}
-      </div>
+    <div className="org__chart">
+      <h1 className="treeTitle">Sales Performance Chart</h1>
+      <EmployeeNode data={data} />
     </div>
   );
 }
