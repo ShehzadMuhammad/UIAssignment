@@ -1,0 +1,106 @@
+[
+  {
+    "name": "Jamie Anderson",
+    "key": 1,
+    "title": "VP of Sales",
+    "status": "critical",
+    "children": [
+      {
+        "name": "Johann Wrede",
+        "key": 2,
+        "title": "Sales Manager (North America)",
+        "status": "critical",
+        "children": [
+          {
+            "name": "Erik Charles",
+            "key": 3,
+            "title": "Sales Lead (Canada)",
+            "status": "normal",
+            "children": [
+              {
+                "name": "Jennifer Oskowsky",
+                "key": 4,
+                "title": "Sales Representative (Toronto)",
+                "status": "normal"
+              },
+              {
+                "name": "Stacy Johnson",
+                "title": "Sales Representative (Vancouver)",
+                "status": "normal"
+              }
+            ]
+          },
+
+          {
+            "name": "Kieth Guidara",
+            "key": 5,
+            "title": "Sales Lead (USA)",
+            "status": "critical",
+            "children": [
+              {
+                "name": "Michaela Healy",
+                "key": 6,
+                "title": "Sales Representative (New York)",
+                "status": "warning"
+              },
+              {
+                "name": "Haley Mathews",
+                "key": 7,
+                "title": "Sales Representative (Dallas)",
+                "status": "critical"
+              },
+              {
+                "name": "Jeremy Bagwell",
+                "key": 8,
+                "title": "Sales Representative (Los Angeles)",
+                "status": "critical"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Chris Stewart",
+        "key": 9,
+        "title": "Sales Manager (Europe)",
+        "status": "warning",
+        "children": [
+          {
+            "name": "Nancy Pacitto",
+            "key": 10,
+            "title": "Sales Lead (Germany)",
+            "status": "warning",
+            "children": [
+              {
+                "name": "Zana Darwish",
+                "key": 11,
+                "title": "Sales Representative (Berlin)",
+                "status": "normal"
+              },
+              {
+                "name": "Kevin Hipps",
+                "key": 12,
+                "title": "Sales Representative (Frankfurt)",
+                "status": "critical"
+              }
+            ]
+          },
+          {
+            "name": "Chris Sloan",
+            "key": 13,
+            "title": "Sales Lead (Italy)",
+            "status": "normal",
+            "children": [
+              {
+                "name": "Sunil Singh",
+                "key": 14,
+                "title": "Sales Representative (Milan)",
+                "status": "normal"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

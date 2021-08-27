@@ -1,7 +1,8 @@
 import "./App.css";
+import HierarchyTree from "./HierarchyTree";
 
 function App() {
-  return <div>Hello</div>;
+  return <HierarchyTree />;
 }
 
 export default App;
