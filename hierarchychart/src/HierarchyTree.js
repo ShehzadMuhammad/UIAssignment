@@ -2,12 +2,21 @@ import React from "react";
 import data from "./data.json";
 import "./Tree.css";
 
+const getColour = (status) => {
+  if (status === "critical") return "red";
+  if (status === "warning") return "yellow";
+  if (status === "normal") return "lightgreen";
+};
+
 const EmployeeNode = (props) => {
   return (
     <>
       {props.data.map((employee) => (
         <ul className="tree">
-          <div className="employeeBox">
+          <div
+            style={{ backgroundColor: getColour(employee.status) }}
+            className="employeeBox"
+          >
             <span className="employeeName">{employee.name}</span>
             <span>{employee.title}</span>
           </div>
