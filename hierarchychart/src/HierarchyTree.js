@@ -8,29 +8,44 @@ const getColour = (status) => {
   if (status === "normal") return "lightgreen";
 };
 
-const EmployeeNode = (props) => {
-  return (
-    <div className="hierarchyTree">
-      <ul>
-        {props.data.map((employee) => (
-          <li>
-            <div
-              style={{ backgroundColor: getColour(employee.status) }}
-              className="employeeBox"
-            >
-              <span className="employeeName">{employee.name}</span>
-              <span>{employee.title}</span>
-            </div>
-            {/* <div className="arrowDown">Arrow Down</div> */}
-            {employee.children?.length && (
-              <EmployeeNode data={employee.children} />
-            )}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
+class EmployeeNode extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { employeeData: this.props.data };
+    this.makeTimer();
+  }
+
+  makeTimer() {
+    setInterval(() => {
+      console.log("Refresh");
+      this.setState = { employeeData: this.props.data };
+    }, 20000);
+  }
+
+  render() {
+    return (
+      <div className="hierarchyTree">
+        <ul>
+          {this.state.employeeData.map((employee) => (
+            <li>
+              <div
+                style={{ backgroundColor: getColour(employee.status) }}
+                className="employeeBox"
+              >
+                <span className="employeeName">{employee.name}</span>
+                <span>{employee.title}</span>
+              </div>
+              {/* <div className="arrowDown">Arrow Down</div> */}
+              {employee.children?.length && (
+                <EmployeeNode data={employee.children} />
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
+}
 
 export default function HierarchyTree() {
   return (
