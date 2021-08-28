@@ -51,6 +51,17 @@ export default function HierarchyTree() {
   return (
     <div className="org__chart">
       <h1 className="hierarchyTreeTitle">Sales Performance Chart</h1>
+      <div className="statusBox">
+        <span className="statusLabels" style={{ color: "red" }}>
+          Critical
+        </span>
+        <span className="statusLabels" style={{ color: "yellow" }}>
+          Warning
+        </span>
+        <span className="statusLabels" style={{ color: "green" }}>
+          Normal
+        </span>
+      </div>
       <EmployeeNode data={data} />
     </div>
   );

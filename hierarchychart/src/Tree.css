@@ -1,10 +1,22 @@
-/*Now the CSS*/
-
 .hierarchyTreeTitle {
   text-align: center;
 }
 
-.employeeBox {
+.statusBox {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 25px;
+  background-color: lightgrey;
+  padding: 10px;
+}
+
+.statusLabels {
+  display: block;
+}
+
+. .employeeBox {
   padding: 10px;
   position: relative;
 }
