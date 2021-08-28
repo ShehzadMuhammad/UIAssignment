@@ -33,9 +33,8 @@ class EmployeeNode extends React.Component {
                 className="employeeBox"
               >
                 <span className="employeeName">{employee.name}</span>
-                <span>{employee.title}</span>
+                <span className="employeeTitle">{employee.title}</span>
               </div>
-              {/* <div className="arrowDown">Arrow Down</div> */}
               {employee.children?.length && (
                 <EmployeeNode data={employee.children} />
               )}

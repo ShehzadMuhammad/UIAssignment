@@ -16,9 +16,13 @@
   display: block;
 }
 
-. .employeeBox {
+.employeeBox {
   padding: 10px;
   position: relative;
+}
+
+.employeeTitle {
+  font-style: italic;
 }
 
 .employeeName {
