@@ -1,12 +1,4 @@
 /*Now the CSS*/
-* {
-  margin: 0;
-  padding: 0;
-}
-
-.treeTitle {
-  text-align: center;
-}
 
 .employeeBox {
   padding: 10px;
@@ -18,19 +10,19 @@
   font-size: 30px;
 }
 
-.tree {
+.hierarchyTree {
   display: grid;
   text-align: center;
   justify-content: center;
 }
 
-.tree ul {
+.hierarchyTree ul {
   display: flex;
   padding-top: 20px;
   position: relative;
 }
 
-.tree li {
+.hierarchyTree li {
   flex-wrap: nowrap;
   text-align: center;
   list-style-type: none;
@@ -38,8 +30,8 @@
   padding: 20px 5px 0 5px;
 }
 
-.tree li::before,
-.tree li::after {
+.hierarchyTree li::before,
+.hierarchyTree li::after {
   content: "";
   position: absolute;
   top: 0;
@@ -48,35 +40,35 @@
   width: 50%;
   height: 20px;
 }
-.tree li::after {
+.hierarchyTree li::after {
   right: auto;
   left: 50%;
   border-left: 1px solid #ccc;
 }
 
-.tree li:only-child::after,
-.tree li:only-child::before {
+.hierarchyTree li:only-child::after,
+.hierarchyTree li:only-child::before {
   display: none;
 }
 
-.tree li:only-child {
+.hierarchyTree li:only-child {
   padding-top: 0;
 }
 
-.tree li:first-child::before,
-.tree li:last-child::after {
+.hierarchyTree li:first-child::before,
+.hierarchyTree li:last-child::after {
   border: 0 none;
 }
 
-.tree li:last-child::before {
+.hierarchyTree li:last-child::before {
   border-right: 1px solid #ccc;
   border-radius: 0 5px 0 0;
 }
-.tree li:first-child::after {
+.hierarchyTree li:first-child::after {
   border-radius: 5px 0 0 0;
 }
 
-.tree ul ul::before {
+.hierarchyTree ul ul::before {
   content: "";
   position: absolute;
   top: 0;

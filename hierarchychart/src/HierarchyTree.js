@@ -10,7 +10,7 @@ const getColour = (status) => {
 
 const EmployeeNode = (props) => {
   return (
-    <div className="tree">
+    <div className="hierarchyTree">
       <ul>
         {props.data.map((employee) => (
           <li>
