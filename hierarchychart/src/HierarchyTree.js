@@ -10,24 +10,25 @@ const getColour = (status) => {
 
 const EmployeeNode = (props) => {
   return (
-    <>
-      {props.data.map((employee) => (
-        <ul className="tree">
-          <div
-            style={{ backgroundColor: getColour(employee.status) }}
-            className="employeeBox"
-          >
-            <span className="employeeName">{employee.name}</span>
-            <span>{employee.title}</span>
-          </div>
+    <div className="tree">
+      <ul>
+        {props.data.map((employee) => (
           <li>
+            <div
+              style={{ backgroundColor: getColour(employee.status) }}
+              className="employeeBox"
+            >
+              <span className="employeeName">{employee.name}</span>
+              <span>{employee.title}</span>
+            </div>
+            {/* <div className="arrowDown">Arrow Down</div> */}
             {employee.children?.length && (
               <EmployeeNode data={employee.children} />
             )}
           </li>
-        </ul>
-      ))}
-    </>
+        ))}
+      </ul>
+    </div>
   );
 };
 
