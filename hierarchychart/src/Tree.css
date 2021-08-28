@@ -1,5 +1,9 @@
 /*Now the CSS*/
 
+.hierarchyTreeTitle {
+  text-align: center;
+}
+
 .employeeBox {
   padding: 10px;
   position: relative;

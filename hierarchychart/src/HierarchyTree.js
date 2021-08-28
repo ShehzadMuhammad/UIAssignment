@@ -35,7 +35,7 @@ const EmployeeNode = (props) => {
 export default function HierarchyTree() {
   return (
     <div className="org__chart">
-      <h1 className="treeTitle">Sales Performance Chart</h1>
+      <h1 className="hierarchyTreeTitle">Sales Performance Chart</h1>
       <EmployeeNode data={data} />
     </div>
   );
