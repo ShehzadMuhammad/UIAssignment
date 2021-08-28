@@ -19,18 +19,19 @@
 }
 
 .tree {
-  display: flex;
+  display: grid;
   text-align: center;
   justify-content: center;
 }
 
 .tree ul {
+  display: flex;
   padding-top: 20px;
   position: relative;
 }
 
 .tree li {
-  float: left;
+  flex-wrap: nowrap;
   text-align: center;
   list-style-type: none;
   position: relative;
