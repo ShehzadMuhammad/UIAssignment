@@ -12,14 +12,14 @@ class EmployeeNode extends React.Component {
   constructor(props) {
     super(props);
     this.state = { employeeData: this.props.data };
-    this.makeTimer();
+    this.refreshData();
   }
 
-  makeTimer() {
+  refreshData() {
     setInterval(() => {
       console.log("Refresh");
       this.setState = { employeeData: this.props.data };
-    }, 20000);
+    }, 108000);
   }
 
   render() {
