@@ -29,11 +29,15 @@
   display: block;
   font-size: 30px;
 }
+.org__chart {
+}
 
 .hierarchyTree {
   display: grid;
   text-align: center;
   justify-content: center;
+  grid-auto-flow: column;
+  overflow: auto;
 }
 
 .hierarchyTree ul {
