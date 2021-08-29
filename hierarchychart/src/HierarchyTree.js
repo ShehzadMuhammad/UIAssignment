@@ -1,6 +1,7 @@
 import React from "react";
 import data from "./data.json";
 import "./HierarchyTree.css";
+import { animateScroll } from "react-scroll";
 
 const getColour = (status) => {
   if (status === "critical") return "red";
@@ -13,6 +14,8 @@ class EmployeeNode extends React.Component {
     super(props);
     this.state = { employeeData: this.props.data };
     this.refreshData();
+    this.scrollToBottom();
+    this.scrollToTop();
   }
 
   refreshData() {
@@ -22,10 +25,26 @@ class EmployeeNode extends React.Component {
     }, 108000);
   }
 
+  scrollToBottom() {
+    setInterval(() => {
+      animateScroll.scrollToBottom({
+        containerId: "options-holder",
+      });
+    }, 20000);
+  }
+
+  scrollToTop() {
+    setInterval(() => {
+      animateScroll.scrollToTop({
+        containerId: "options-holder",
+      });
+    }, 40000);
+  }
+
   render() {
     return (
       <div className="hierarchyTree">
-        <ul>
+        <ul id="container">
           {this.state.employeeData.map((employee) => (
             <li>
               <div
