@@ -100,34 +100,6 @@
             ]
           }
         ]
-      },
-      {
-        "name": "Chris Sloan",
-        "key": 13,
-        "title": "Sales Lead (Italy)",
-        "status": "normal",
-        "children": [
-          {
-            "name": "Sunil Singh",
-            "key": 14,
-            "title": "Sales Representative (Milan)",
-            "status": "normal"
-          }
-        ]
-      },
-      {
-        "name": "Chris Sloan",
-        "key": 13,
-        "title": "Sales Lead (Italy)",
-        "status": "normal",
-        "children": [
-          {
-            "name": "Sunil Singh",
-            "key": 14,
-            "title": "Sales Representative (Milan)",
-            "status": "normal"
-          }
-        ]
       }
     ]
   }
