@@ -1,6 +1,6 @@
 import React from "react";
 import data from "./data.json";
-import "./Tree.css";
+import "./HierarchyTree.css";
 
 const getColour = (status) => {
   if (status === "critical") return "red";
