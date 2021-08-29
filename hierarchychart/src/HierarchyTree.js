@@ -13,9 +13,9 @@ class EmployeeNode extends React.Component {
   constructor(props) {
     super(props);
     this.state = { employeeData: this.props.data };
+    // this.scrollToBottom(); Commented out for testing purposes
+    // this.scrollToTop();
     this.refreshData();
-    this.scrollToBottom();
-    this.scrollToTop();
   }
 
   refreshData() {
@@ -44,7 +44,7 @@ class EmployeeNode extends React.Component {
   render() {
     return (
       <div className="hierarchyTree">
-        <ul id="container">
+        <ul id="treeContainer">
           {this.state.employeeData.map((employee) => (
             <li>
               <div
